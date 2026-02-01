@@ -15,7 +15,7 @@ https://github.com/konveyor/example-applications
 
 https://github.com/konveyor/operator
 
-https://github.com/konveyor/operator#konveyor-operator-installation-on-k8s
+https://github.com/konveyor/    operator#konveyor-operator-installation-on-k8s
 
 
 ## Requisitos
