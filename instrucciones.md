@@ -15,12 +15,15 @@ https://github.com/konveyor/example-applications
 
 https://github.com/konveyor/operator
 
-https://github.com/konveyor/    operator#konveyor-operator-installation-on-k8s
+https://github.com/konveyor/operator#konveyor-operator-installation-on-k8s
 
 
 ## Requisitos
 
 https://minikube.sigs.k8s.io/docs/commands/start/
+
+minikube start --driver=podman -p my-konveyor --memory=2200 mb --cpus=2
+
 
 ### Port Forward
 
@@ -33,3 +36,12 @@ Forwarding to a Pod:
 Forwarding to a Service:
 
     kubectl port-forward service/my-service 8080:80
+
+cat << EOF | kubectl apply -f -
+kind: Tackle
+apiVersion: tackle.konveyor.io/v1alpha1
+metadata:
+  name: tackle
+  namespace: konveyor-tackle
+spec:
+EOF
